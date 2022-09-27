@@ -32,8 +32,9 @@ def evaluate(user_choice):
             show_computer_victory(computer_choice)
         else:
             show_draw(computer_choice)
+
     elif user_choice == "Rock":
-        if computer_choice == "Scisors":
+        if computer_choice == "Scissors":
             show_user_victory(computer_choice)
         elif computer_choice == "Paper":
             show_computer_victory(computer_choice)
@@ -46,7 +47,7 @@ def evaluate(user_choice):
             show_computer_victory(computer_choice)
         else:
             show_draw(computer_choice)
-                      
+
 def show_computer_victory(computer_choice):
     return show_result("Computer selected '" + computer_choice + "'. Computer wins")
 
@@ -59,7 +60,7 @@ def show_draw(computer_choice):
 def show_result(text):
     global result
     result = text
-    
+
 # Create a frame and assign callbacks to event handlers
 frame = simplegui.create_frame("Game", 795, 150)
 frame.add_button("Paper", click_paper)
